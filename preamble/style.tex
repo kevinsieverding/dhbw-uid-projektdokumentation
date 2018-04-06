@@ -1,0 +1,27 @@
+% !TeX encoding=utf8
+% !TeX spellcheck = en-US
+
+\usepackage[
+    top=2.5cm,
+    bottom=2cm,
+    left=4cm,           % 3.5 + 0.5 Bindingoffset
+    right=2.5cm,
+    headheight=5ex,     % ~ 5 small x'es on top of each other
+    headsep=1.25cm-\headheight, % pagetop to header = 1.25cm
+    footskip=0.75cm,
+]{geometry} 
+
+\usepackage[
+    autooneside=false,
+    footsepline,
+    plainfootsepline,
+    headsepline,
+    plainheadsepline,
+    automark,
+]{scrlayer-scrpage}
+
+\cfoot[]{}                      % Center part of footer empty
+\chead[]{}                      % Center part of footer empty
+\ofoot[\pagemark]{\pagemark}    % Outer footer pagemark 
+                                % (-number)						
+\ohead{\rightmark}				% Outer header chapter

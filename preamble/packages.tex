@@ -1,0 +1,228 @@
+% !TeX encoding=utf8
+% !TeX spellcheck = en-US
+
+%% Base packages
+
+\usepackage{calc}	        % Calculation
+
+\usepackage[                % Multi language support
+    main=ngerman,
+%    british,                % For the european date format in the bibliographies
+%    ngerman,
+]{babel}        	
+
+\usepackage[utf8]{inputenc} % UTF-8 text encoding
+
+\usepackage[		        % Color support with color mixing models
+    dvipsnames, % Load a set of predefined colors 
+    table,      % Load the colortbl package
+    % fixpdftex,  % Load the pdfcolmk package (may be problematic)
+    hyperref,   % Support  the  hyperref  package
+    fixinclude, % Prevent dvips color reset before .eps file inclusion
+]{xcolor}
+
+\usepackage[		        % Support for graphics in LaTeX
+    %final,
+%    draft 		% do not include images (faster)
+]{graphicx}
+
+\usepackage{epstopdf}   % If an eps image is detected, epstopdf is
+                        % automatically called to convert it to pdf format.
+
+% \usepackage{ragged2e}	% environments for setting ragged text
+						% which allow hyphenation.
+                        
+%% Bugfixes
+
+%\usepackage{marginnote} % marginnote allows a margin note, where \marginpar 
+%                        % fails 
+%
+\usepackage{scrhack}    % Redefines implementations of 
+%                        % packages float, hyperref and listings
+%
+%\usepackage{marginfix}  % changes the \marginpar commands, such
+%                        % that long margin notes work.
+%
+%\RequirePackage{xspace} %  Used to define commands that don't eat spaces.
+%
+%\usepackage[xspace]{ellipsis}   % fixes bug in ellipsis (...) 
+
+%% Fonts
+
+\usepackage{relsize}    % Set the font size relative to the current font size
+
+%% Math
+
+\usepackage[            % basic math package
+    centertags, % (default) center tags vertically
+    %tbtags,    % 'Top-or-bottom tags': For a split equation, place equation
+    % numbers level with the last (resp. first) line, if numbers
+    % are on the right (resp. left).
+    sumlimits,  %(default) Place the subscripts and superscripts of summation
+    % symbols above and below
+    %nosumlimits, % Always place the subscripts and superscripts of
+    % summation-type symbols to the side, even in displayed
+    % equations.
+    intlimits,  % Like sumlimits, but for integral symbols.
+    %nointlimits, % (default) Opposite of intlimits.
+    namelimits, % (default) Like sumlimits, but for certain 'operator names'
+    % such as det, inf, lim, max, min, that traditionally have
+    % subscripts placed underneath when they occur in a displayed
+    % equation.
+    %nonamelimits, % Opposite of namelimits.
+    %leqno,     % Place equation numbers on the left.
+    %reqno,     % Place equation numbers on the right.
+    fleqn,      % Position equations at a fixed indent from the left margin
+    % rather than centered in the text column.
+]{amsmath}
+
+%\usepackage[fixamsmath,disallowspaces]{mathtools}   % The mathtools package is 
+%                                                    % an extension package to 
+%                                                    % amsmath. Furthermore it 
+%                                                    % corrects various bugs
+%
+%\usepackage[            % Inhibits the usage of plain TeX and of standard 
+%%LaTeX 
+%                        % math environments
+%    all,
+%    % warning
+%    error
+%]{onlyamsmath}
+%
+%\usepackage{braket}     % Macros for Dirac bra-ket notation and sets.
+%
+%\usepackage{cancel}     % strike out arguments in math mode
+%
+%\usepackage{empheq}     % Emphasize equations
+%
+%\usepackage{exscale}    % scales math mode output in all environments correct
+%
+%\usepackage{fixmath}    % fixes for the default Computer Modern math fonts
+%
+%\usepackage{icomma}     % Enables the correct use of the comma as a decimal 
+%                        % separator in math mode
+%
+%\usepackage{xfrac}      % LaTeX 3 Package for nice inline fractions
+%                        % Provides: \sfrac{1}{2}
+%
+%%% Science
+%
+%\usepackage{siunitx}    % siunitx aims to provide a unified method to
+%                        % typeset numbers and units correctly and easily.
+                        
+%% Symbols
+
+\usepackage[gen]{eurosym}   % European currency symbol
+
+\usepackage{pifont}         % Common symbols
+
+%% Tables
+
+%\usepackage{booktabs}           % some additional commands to enhance the 
+%                                % quality of tables
+%
+%\usepackage{multirow, bigstrut} % extends the standard tabular environment 
+%%with 
+%                                % cells spanning over multiple rows.
+%
+%
+%\usepackage{ltxtable}           % Table spanning over many pages (from 
+%                                % longtable package) and with strechable  
+%                                % columns (from tabularx package)
+%
+\usepackage{tabu}       % defines a single environment tabu to make all kinds 
+%                        % of tabulars. It is more flexible than tabular, 
+%                        % tabular*, tabularx and array and extends the 
+%                        % possibilities.
+%
+%\usepackage{tablestyles}
+
+%% Text
+
+% - Text decoration
+
+\usepackage[normalem]{ulem} % commands for underlining for emphasis
+
+\usepackage{soulutf8}       % commands for for emphasis
+
+\usepackage{url}            % enable linebreaks for URLs
+
+\usepackage{setspace}       % for custom line sapcing
+
+\usepackage{float}          % better control over float environments
+
+\usepackage[
+    activate={true, compatibility},
+    final,tracking=true,
+%    kerning=true,
+%    spacing=true,
+    factor=1100,
+    stretch=10
+    ,shrink=10
+]{microtype}
+
+\microtypecontext{spacing=nonfrench}
+
+% activate={true,nocompatibility} - activate protrusion and expansion
+% final - enable microtype; use "draft" to disable
+% tracking=true, kerning=true, spacing=true - activate these techniques
+% factor=1100 - add 10% to the protrusion amount (default is 1000)
+% stretch=10, shrink=10 - reduce stretchability/shrinkability (default is 20/20)
+
+% - Footnotes
+
+\usepackage[                % The footmisc package provides several different 
+%                            % customisations of the way foonotes are 
+%                            % represented. Fixes a LaTeX bug with option 
+%                            % 'bottom'
+%    bottom,      % Footnotes appear always on bottom. This is necessary
+%                 % especially when floats are used
+%    stable,      % Make footnotes stable in section titles
+    perpage,     % Reset on each page
+%    %para,       % Place footnotes side by side of in one paragraph.
+%    %side,       % Place footnotes in the margin
+%    ragged,      % Use RaggedRight
+%    %norule,     % suppress rule above footnotes
+    multiple,    % rearrange multiple footnotes intelligent in the text.
+%    %symbol,     % use symbols instead of numbers
+]{footmisc}
+
+% - Code listings
+
+\usepackage{listings}
+
+% - Quotes
+
+\usepackage[
+    autostyle,
+    % german=guillemets
+    ]{csquotes}
+
+%% Bibiliography
+\usepackage[
+    backend=biber,
+%    style=alphabetic,
+    style=authoryear,
+    maxcitenames=2,
+%    citestyle=authortitle,
+%    sorting=none
+]{biblatex}
+
+% - Abbreviations and Acronyms
+\usepackage[
+    acronym,
+    toc
+]{glossaries}
+%\usepackage[
+%    printonlyused,
+%    withpage    
+%]{acronym}
+
+% - Table of contents
+\usepackage[nottoc]{tocbibind}
+
+% - Manipulating Counters
+\usepackage{chngcntr}
+
+% - Prevent floats from going over sections
+\usepackage[section]{placeins}

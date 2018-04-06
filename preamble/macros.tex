@@ -1,0 +1,15 @@
+% !TeX encoding=utf8
+% !TeX spellcheck = en-US
+
+\title{\mytitle}
+\author{\me}
+
+\newcommand{\dsh}{~--~}
+
+\newlength{\currentparskip}
+\newenvironment{minipageparskip}
+{\setlength{\currentparskip}{\parskip}% save the value
+    \begin{minipage}{\textwidth}% open the minipage
+        \setlength{\parskip}{\currentparskip}% restore the value
+    }
+{\end{minipage}}
