@@ -1,5 +1,6 @@
 % !TeX encoding=utf8
 % !TeX spellcheck = en-US
+% !TeX root=../UID_Project_Documentation.tex
 
 %% Base packages
 
@@ -9,12 +10,12 @@
     main=ngerman,
 %    british,                % For the european date format in the bibliographies
 %    ngerman,
-]{babel}        	
+]{babel}
 
 \usepackage[utf8]{inputenc} % UTF-8 text encoding
 
 \usepackage[		        % Color support with color mixing models
-    dvipsnames, % Load a set of predefined colors 
+    dvipsnames, % Load a set of predefined colors
     table,      % Load the colortbl package
     % fixpdftex,  % Load the pdfcolmk package (may be problematic)
     hyperref,   % Support  the  hyperref  package
@@ -31,13 +32,13 @@
 
 % \usepackage{ragged2e}	% environments for setting ragged text
 						% which allow hyphenation.
-                        
+
 %% Bugfixes
 
-%\usepackage{marginnote} % marginnote allows a margin note, where \marginpar 
-%                        % fails 
+%\usepackage{marginnote} % marginnote allows a margin note, where \marginpar
+%                        % fails
 %
-\usepackage{scrhack}    % Redefines implementations of 
+\usepackage{scrhack}    % Redefines implementations of
 %                        % packages float, hyperref and listings
 %
 %\usepackage{marginfix}  % changes the \marginpar commands, such
@@ -45,7 +46,7 @@
 %
 %\RequirePackage{xspace} %  Used to define commands that don't eat spaces.
 %
-%\usepackage[xspace]{ellipsis}   % fixes bug in ellipsis (...) 
+%\usepackage[xspace]{ellipsis}   % fixes bug in ellipsis (...)
 
 %% Fonts
 
@@ -76,13 +77,13 @@
     % rather than centered in the text column.
 ]{amsmath}
 
-%\usepackage[fixamsmath,disallowspaces]{mathtools}   % The mathtools package is 
-%                                                    % an extension package to 
-%                                                    % amsmath. Furthermore it 
+%\usepackage[fixamsmath,disallowspaces]{mathtools}   % The mathtools package is
+%                                                    % an extension package to
+%                                                    % amsmath. Furthermore it
 %                                                    % corrects various bugs
 %
-%\usepackage[            % Inhibits the usage of plain TeX and of standard 
-%%LaTeX 
+%\usepackage[            % Inhibits the usage of plain TeX and of standard
+%%LaTeX
 %                        % math environments
 %    all,
 %    % warning
@@ -99,7 +100,7 @@
 %
 %\usepackage{fixmath}    % fixes for the default Computer Modern math fonts
 %
-%\usepackage{icomma}     % Enables the correct use of the comma as a decimal 
+%\usepackage{icomma}     % Enables the correct use of the comma as a decimal
 %                        % separator in math mode
 %
 %\usepackage{xfrac}      % LaTeX 3 Package for nice inline fractions
@@ -109,7 +110,7 @@
 %
 %\usepackage{siunitx}    % siunitx aims to provide a unified method to
 %                        % typeset numbers and units correctly and easily.
-                        
+
 %% Symbols
 
 \usepackage[gen]{eurosym}   % European currency symbol
@@ -118,21 +119,21 @@
 
 %% Tables
 
-%\usepackage{booktabs}           % some additional commands to enhance the 
+%\usepackage{booktabs}           % some additional commands to enhance the
 %                                % quality of tables
 %
-%\usepackage{multirow, bigstrut} % extends the standard tabular environment 
-%%with 
+%\usepackage{multirow, bigstrut} % extends the standard tabular environment
+%%with
 %                                % cells spanning over multiple rows.
 %
 %
-%\usepackage{ltxtable}           % Table spanning over many pages (from 
-%                                % longtable package) and with strechable  
+%\usepackage{ltxtable}           % Table spanning over many pages (from
+%                                % longtable package) and with strechable
 %                                % columns (from tabularx package)
 %
-\usepackage{tabu}       % defines a single environment tabu to make all kinds 
-%                        % of tabulars. It is more flexible than tabular, 
-%                        % tabular*, tabularx and array and extends the 
+\usepackage{tabu}       % defines a single environment tabu to make all kinds
+%                        % of tabulars. It is more flexible than tabular,
+%                        % tabular*, tabularx and array and extends the
 %                        % possibilities.
 %
 %\usepackage{tablestyles}
@@ -171,9 +172,9 @@
 
 % - Footnotes
 
-\usepackage[                % The footmisc package provides several different 
-%                            % customisations of the way foonotes are 
-%                            % represented. Fixes a LaTeX bug with option 
+\usepackage[                % The footmisc package provides several different
+%                            % customisations of the way foonotes are
+%                            % represented. Fixes a LaTeX bug with option
 %                            % 'bottom'
 %    bottom,      % Footnotes appear always on bottom. This is necessary
 %                 % especially when floats are used
@@ -215,7 +216,7 @@
 ]{glossaries}
 %\usepackage[
 %    printonlyused,
-%    withpage    
+%    withpage
 %]{acronym}
 
 % - Table of contents
@@ -226,3 +227,7 @@
 
 % - Prevent floats from going over sections
 \usepackage[section]{placeins}
+
+% - better titles
+% \usepackage{titlesec}
+% \newcommand{\sectionbreak}{\clearpage}

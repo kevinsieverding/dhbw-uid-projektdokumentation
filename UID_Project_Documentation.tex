@@ -2,23 +2,23 @@
 % !TeX spellcheck=de-DE
 
 \documentclass[
-draft=false,     % draft mode (no images, layout errors shown)
-paper=a4,
-paper=portrait,
-parskip=half,    % Full empty line between paragraphs
-%   parindent=0pt,
-pagesize=auto,   % driver
-fontsize=12pt,   
-version=last,    % KOMA Script version
-%   twoside,
-]{scrartcl}
+  draft=false,     % draft mode (no images, layout errors shown)
+  paper=a4,
+  paper=portrait,
+  parskip=half,    % Full empty line between paragraphs
+  %   parindent=0pt,
+  pagesize=auto,   % driver
+  fontsize=12pt,
+  version=last,    % KOMA Script version
+  %   twoside,
+  ]{scrartcl}
 
-% Encoding of _files and directories_
-% (ensures that any file can be loaded without problems)
-\usepackage[%
-extendedchars, encoding, multidot, space,
-filenameencoding=latin1, % Windows XP, Vista, 7
-% filenameencoding=utf8,   % Linux, OS X
+  % Encoding of _files and directories_
+  % (ensures that any file can be loaded without problems)
+  \usepackage[%
+  extendedchars, encoding, multidot, space,
+  filenameencoding=latin1, % Windows XP, Vista, 7
+  % filenameencoding=utf8,   % Linux, OS X
 ]{grffile}
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -38,11 +38,11 @@ filenameencoding=latin1, % Windows XP, Vista, 7
 
 % Hyperref
 \usepackage[
-hyperfootnotes=false
+  hyperfootnotes=false
 ]{hyperref}
 
 \hypersetup{
-    %    colorlinks=true,    % For PDF   
+    %    colorlinks=true,    % For PDF
     %    filecolor=magenta,
     %    linkcolor=black,
     %    citecolor=black,
@@ -76,40 +76,40 @@ hyperfootnotes=false
 \begin{document}
     	% -- title page --
 %    \include{content/00-Title}
-    
+
      \title{MyNewsApp: Projektdokumentation}
      \author{Stefan Bergmann \and Alexander Gebhardt \and Kevin Sieverding \and Maximilian Stefanac \and Fabian Wallisch}
-     
+
      \maketitle
      \thispagestyle{empty}
-     
+
      \newpage
-    
+
     \pagenumbering{Roman}
     \pagestyle{plain.scrheadings}
 %    \setcounter{page}{2}
-    
+
      % -- table of contents --
     \microtypesetup{protrusion=false} % Disable protrusion for lists
-    
+
     \tableofcontents
-    
+
     \newpage
-    
+
     \listoffigures
-    
+
     \clearpage
-    
+
     \microtypesetup{protrusion=true} % Disable protrusion for lists
-    
+
     %% Content formatting
-    
+
     \pagenumbering{arabic}
     \pagestyle{scrheadings}
     \setcounter{page}{1}
     \onehalfspacing{}
-    
+
     \include{content/10-Documentation}
-    
-    
+
+
 \end{document}
